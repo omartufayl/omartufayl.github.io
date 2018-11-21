@@ -5,14 +5,26 @@
     <title>HCI Project</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
-        d3.csv("sqrt100train.csv", function(data1) {
-            d3.csv("sqrt100test.csv", function(data2) {
-                    // do something with the data
-                    console.log("CSV1", data1);
-                    console.log("CSV2", data2);
+        // d3.csv("sqrt100train.csv", function(data1) {
+        //     d3.csv("sqrt100test.csv", function(data2) {
+        //             // do something with the data
+        //             console.log("CSV1", data1);
+        //             console.log("CSV2", data2);
+        //     });
+        // });
 
+        d3.csv("sqrt100train.csv", function(error, data2) {
+            d3.csv("sqrt100test.csv", function(error, data) {
             });
         });
+
+        var newArray = [];
+        for(var i = 0; i < data.length; i++) {
+            newArray.push({Trees: data[i].Trees,
+                           Train: data[i].Train,
+                           Test: data2[i].Test});
+        }
+        console.log(newArray);
     </script>
 </head>
 <body>
