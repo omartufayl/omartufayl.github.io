@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>HCI Project</title>
-  </head>
-  <body>
-      Hello, world.
-  </body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        d3.csv("sqrt100train.csv", function(data1) {
+            d3.csv("sqrt100test.csv", function(data2) {
+                    // do something with the data
+                    console.log("Hello data");
+                    console.log("CSV1", data1);
+                    console.log("CSV2", data2);
+
+            });
+        });
+
+        // get the data
+        d3.csv("sqrt100train.csv", function(error, data) {
+          if (error) throw error;
+              console.log(data);
+              //format data if required...
+              //draw chart
+        });
+    </script>
+</head>
+<body>
+    Hello, world.
+</body>
 </html>
