@@ -16,7 +16,7 @@
         d3.csv("sqrt100train.csv", function(error, data1) {
             d3.csv("sqrt100test.csv", function(error, data2) {
                 var newArray = [];
-                for(var i = 0; i < data.length; i++) {
+                for(var i = 0; i < data1.length; i++) {
                     newArray.push({Trees: data1[i].Trees,
                                    Train: data1[i].Train,
                                    Test: data2[i].Test});
@@ -27,6 +27,6 @@
     </script>
 </head>
 <body>
-    Hello, world...2
+    Hello, world...3
 </body>
 </html>
