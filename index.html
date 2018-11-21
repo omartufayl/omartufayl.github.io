@@ -15,16 +15,15 @@
 
         d3.csv("sqrt100train.csv", function(error, data2) {
             d3.csv("sqrt100test.csv", function(error, data) {
+                var newArray = [];
+                for(var i = 0; i < data.length; i++) {
+                    newArray.push({Trees: data[i].Trees,
+                                   Train: data[i].Train,
+                                   Test: data2[i].Test});
+                }
+                console.log(newArray);
             });
         });
-
-        var newArray = [];
-        for(var i = 0; i < data.length; i++) {
-            newArray.push({Trees: data[i].Trees,
-                           Train: data[i].Train,
-                           Test: data2[i].Test});
-        }
-        console.log(newArray);
     </script>
 </head>
 <body>
