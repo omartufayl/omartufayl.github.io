@@ -13,22 +13,23 @@
         //     });
         // });
 
-        d3.csv("sqrt100train.csv", function(error, data1) {
-            d3.csv("sqrt100test.csv", function(error, data2) {
+        d3.csv("sqrt100train.csv", function(data1) {
+            d3.csv("sqrt100test.csv", function(data2) {
                 var newArray = [];
                 for(var i = 0; i < data1.length; i++) {
                     newArray.push({Trees: data1[i].Trees,
                                    Train: data1[i].Train,
                                    Test: data2[i].Test});
                 }
-                console.log(data1);
-                // console.log("----------");
+
                 // console.log(data2);
             });
         });
+        console.log("----------");
+        console.log(data1);
     </script>
 </head>
 <body>
-    Hello, world...5
+    Hello, world...6
 </body>
 </html>
