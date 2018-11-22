@@ -6,10 +6,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3-queue.v3.min.js"></script>
     <script>
-    var q = d3.queue();
-    </script>
-    <script>
-        queue()
+        d3.queue()
         .defer(d3.csv, 'sqrt100train.csv')
         .defer(d3.csv, 'sqrt100test.csv')
         .await(processData);
@@ -44,6 +41,6 @@
     </script>
 </head>
 <body>
-    Hello, world...7
+    Hello, world...8
 </body>
 </html>
